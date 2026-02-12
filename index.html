@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0c1445 0%, #1a237e 30%, #283593 60%, #3949ab 100%);
+            background: linear-gradient(135deg, #0a0a2e 0%, #1a1a4e 20%, #2a2a6e 40%, #1a237e 70%, #283593 100%);
             min-height: 100vh;
             overflow-x: hidden;
             color: white;
@@ -42,15 +42,15 @@
 
         /* 控制面板 */
         .control-panel {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
             border-radius: 20px;
             padding: 25px;
             width: 320px;
             max-height: calc(100vh - 40px);
             overflow-y: auto;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         }
 
         .control-panel::-webkit-scrollbar {
@@ -71,7 +71,7 @@
             font-size: 24px;
             margin-bottom: 5px;
             text-align: center;
-            background: linear-gradient(135deg, #fff, #90caf9);
+            background: linear-gradient(135deg, #fff, #b3e5fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -80,7 +80,7 @@
         .subtitle {
             text-align: center;
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.5);
             margin-bottom: 25px;
         }
 
@@ -90,24 +90,24 @@
         }
 
         .type-selector h3 {
-            font-size: 14px;
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.7);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .type-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 8px;
         }
 
         .type-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             color: white;
-            padding: 12px 8px;
+            padding: 10px 6px;
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -116,32 +116,36 @@
         }
 
         .type-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
         }
 
         .type-btn.active {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-color: transparent;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
         }
 
         /* 参数控制 */
         .parameter-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             padding: 15px;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.25);
             border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .parameter-group h3 {
-            font-size: 14px;
-            margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
 
         .parameter {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
         .parameter:last-child {
@@ -152,26 +156,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .parameter label {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.75);
         }
 
         .parameter-value {
-            font-size: 12px;
-            color: #90caf9;
-            background: rgba(144, 202, 249, 0.1);
+            font-size: 11px;
+            color: #81d4fa;
+            background: rgba(129, 212, 250, 0.15);
             padding: 2px 8px;
             border-radius: 4px;
+            font-weight: 600;
         }
 
         /* 滑块样式 */
         input[type="range"] {
             width: 100%;
-            height: 6px;
+            height: 5px;
             border-radius: 3px;
             background: rgba(255, 255, 255, 0.1);
             outline: none;
@@ -180,12 +185,12 @@
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             cursor: pointer;
-            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.6);
             transition: transform 0.2s ease;
         }
 
@@ -194,8 +199,8 @@
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             cursor: pointer;
@@ -205,41 +210,41 @@
         /* 颜色选择器 */
         .color-picker {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
         }
 
         .color-option {
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 3px solid transparent;
+            border: 2px solid transparent;
         }
 
         .color-option:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
         .color-option.active {
             border-color: white;
-            box-shadow: 0 0 15px currentColor;
+            box-shadow: 0 0 20px currentColor;
         }
 
         /* 按钮 */
         .button-group {
             display: flex;
-            gap: 10px;
-            margin-top: 25px;
+            gap: 8px;
+            margin-top: 20px;
         }
 
         .btn {
             flex: 1;
-            padding: 14px;
+            padding: 12px;
             border: none;
             border-radius: 12px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -254,7 +259,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
         }
 
         .btn-secondary {
@@ -274,7 +279,17 @@
 
         .btn-glow:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(240, 147, 251, 0.5);
+            box-shadow: 0 6px 25px rgba(240, 147, 251, 0.5);
+        }
+
+        .btn-grow {
+            background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
+            color: white;
+        }
+
+        .btn-grow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 198, 251, 0.5);
         }
 
         /* 画布区域 */
@@ -287,7 +302,7 @@
         }
 
         #snowflakeCanvas {
-            background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+            background: radial-gradient(circle at center, rgba(255,255,255,0.03) 0%, transparent 60%);
             border-radius: 20px;
         }
 
@@ -297,12 +312,12 @@
             bottom: 20px;
             right: 20px;
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 15px 25px;
+            backdrop-filter: blur(15px);
+            padding: 12px 20px;
             border-radius: 12px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             animation: fadeIn 0.5s ease;
         }
 
@@ -339,10 +354,10 @@
 
         .toggle-switch {
             position: relative;
-            width: 50px;
-            height: 26px;
+            width: 45px;
+            height: 24px;
             background: rgba(255, 255, 255, 0.2);
-            border-radius: 13px;
+            border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -354,8 +369,8 @@
         .toggle-switch::after {
             content: '';
             position: absolute;
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             background: white;
             border-radius: 50%;
             top: 2px;
@@ -364,12 +379,12 @@
         }
 
         .toggle-switch.active::after {
-            left: 26px;
+            left: 23px;
         }
 
         .toggle-label {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.75);
         }
 
         /* 随机生成按钮 */
@@ -381,7 +396,7 @@
             padding: 12px;
             border-radius: 10px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             transition: all 0.3s ease;
             margin-top: 15px;
@@ -389,7 +404,24 @@
 
         .random-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(56, 239, 125, 0.4);
+            box-shadow: 0 6px 25px rgba(56, 239, 125, 0.5);
+        }
+
+        /* 进度条 */
+        .growth-progress {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .growth-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border-radius: 2px;
+            transition: width 0.1s ease;
         }
     </style>
 </head>
@@ -400,6 +432,10 @@
         <div class="control-panel">
             <h1>❄️ 雪花生成器</h1>
             <p class="subtitle">Snowflake Generator</p>
+
+            <div class="growth-progress">
+                <div class="growth-progress-bar" id="growthProgressBar" style="width: 100%"></div>
+            </div>
 
             <div class="type-selector">
                 <h3>雪花类型</h3>
@@ -418,6 +454,11 @@
             <div class="animation-toggle">
                 <div class="toggle-switch active" id="animToggle"></div>
                 <span class="toggle-label">旋转动画</span>
+            </div>
+
+            <div class="animation-toggle">
+                <div class="toggle-switch active" id="growToggle"></div>
+                <span class="toggle-label">生长动画</span>
             </div>
 
             <div class="parameter-group">
@@ -455,12 +496,14 @@
             <div class="parameter-group">
                 <h3>颜色主题</h3>
                 <div class="color-picker">
-                    <div class="color-option active" style="background: linear-gradient(135deg, #ffffff, #90caf9);" data-color="blue"></div>
+                    <div class="color-option active" style="background: linear-gradient(135deg, #ffffff, #81d4fa);" data-color="blue"></div>
                     <div class="color-option" style="background: linear-gradient(135deg, #ffffff, #ce93d8);" data-color="purple"></div>
                     <div class="color-option" style="background: linear-gradient(135deg, #ffffff, #a5d6a7);" data-color="green"></div>
                     <div class="color-option" style="background: linear-gradient(135deg, #ffffff, #ffcc80);" data-color="orange"></div>
                     <div class="color-option" style="background: linear-gradient(135deg, #ffffff, #ef9a9a);" data-color="red"></div>
                     <div class="color-option" style="background: linear-gradient(135deg, #ffffff, #e0e0e0);" data-color="white"></div>
+                    <div class="color-option" style="background: linear-gradient(135deg, #ffffff, #fdd835);" data-color="gold"></div>
+                    <div class="color-option" style="background: linear-gradient(135deg, #ffffff, #f48fb1);" data-color="pink"></div>
                 </div>
             </div>
 
@@ -480,13 +523,21 @@
                     </div>
                     <input type="range" id="glow" min="0" max="30" value="15">
                 </div>
+                <div class="parameter">
+                    <div class="parameter-header">
+                        <label>生长速度</label>
+                        <span class="parameter-value" id="growSpeedValue">1.0</span>
+                    </div>
+                    <input type="range" id="growSpeed" min="0.2" max="3" step="0.1" value="1">
+                </div>
             </div>
 
             <button class="random-btn" id="randomBtn">🎲 随机生成</button>
 
             <div class="button-group">
+                <button class="btn btn-grow" id="growBtn">重新生长</button>
                 <button class="btn btn-secondary" id="resetBtn">重置</button>
-                <button class="btn btn-primary" id="saveBtn">保存图片</button>
+                <button class="btn btn-primary" id="saveBtn">保存</button>
             </div>
         </div>
 
@@ -513,19 +564,22 @@
 
             reset() {
                 this.x = Math.random() * bgSnow.width;
-                this.y = -10;
-                this.size = Math.random() * 4 + 1;
-                this.speedY = Math.random() * 1 + 0.5;
-                this.speedX = Math.random() * 0.5 - 0.25;
-                this.opacity = Math.random() * 0.5 + 0.2;
+                this.y = -20;
+                this.size = Math.random() * 3 + 1;
+                this.speedY = Math.random() * 0.8 + 0.3;
+                this.speedX = Math.random() * 0.4 - 0.2;
+                this.opacity = Math.random() * 0.4 + 0.1;
                 this.rotation = Math.random() * Math.PI * 2;
-                this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+                this.rotationSpeed = (Math.random() - 0.5) * 0.015;
+                this.wobble = Math.random() * Math.PI * 2;
+                this.wobbleSpeed = Math.random() * 0.02 + 0.01;
             }
 
             update() {
                 this.y += this.speedY;
-                this.x += this.speedX;
+                this.x += this.speedX + Math.sin(this.wobble) * 0.3;
                 this.rotation += this.rotationSpeed;
+                this.wobble += this.wobbleSpeed;
 
                 if (this.y > bgSnow.height) {
                     this.reset();
@@ -537,9 +591,12 @@
                 bgCtx.translate(this.x, this.y);
                 bgCtx.rotate(this.rotation);
                 bgCtx.globalAlpha = this.opacity;
-                bgCtx.fillStyle = 'white';
 
-                // 绘制简单的雪花
+                // 绘制精致的雪花
+                bgCtx.strokeStyle = 'white';
+                bgCtx.lineWidth = this.size * 0.3;
+                bgCtx.lineCap = 'round';
+
                 for (let i = 0; i < 6; i++) {
                     bgCtx.rotate(Math.PI / 3);
                     bgCtx.beginPath();
@@ -552,7 +609,7 @@
             }
         }
 
-        const bgSnowflakes = Array.from({ length: 100 }, () => new BackgroundSnowflake());
+        const bgSnowflakes = Array.from({ length: 150 }, () => new BackgroundSnowflake());
 
         function animateBackground() {
             bgCtx.clearRect(0, 0, bgSnow.width, bgSnow.height);
@@ -561,6 +618,43 @@
                 snowflake.draw();
             });
             requestAnimationFrame(animateBackground);
+        }
+
+        // 粒子系统
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = (Math.random() - 0.5) * 2;
+                this.speedY = (Math.random() - 0.5) * 2;
+                this.opacity = 1;
+                this.decay = Math.random() * 0.02 + 0.01;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.opacity -= this.decay;
+                this.size *= 0.98;
+            }
+
+            draw(ctx) {
+                ctx.save();
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = this.color;
+                ctx.shadowColor = this.color;
+                ctx.shadowBlur = 10;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+
+            isDead() {
+                return this.opacity <= 0;
+            }
         }
 
         // 主雪花生成器
@@ -576,409 +670,476 @@
             thickness: 2,
             colorTheme: 'blue',
             animationEnabled: true,
+            growthEnabled: true,
             rotationSpeed: 1,
             glow: 15,
-            currentRotation: 0
+            growSpeed: 1,
+            currentRotation: 0,
+            growthProgress: 1,
+            growthTarget: 1,
+            particles: []
         };
 
         // 颜色主题
         const colorThemes = {
-            blue: { primary: '#ffffff', secondary: '#90caf9', tertiary: '#64b5f6' },
-            purple: { primary: '#ffffff', secondary: '#ce93d8', tertiary: '#ba68c8' },
-            green: { primary: '#ffffff', secondary: '#a5d6a7', tertiary: '#81c784' },
-            orange: { primary: '#ffffff', secondary: '#ffcc80', tertiary: '#ffb74d' },
-            red: { primary: '#ffffff', secondary: '#ef9a9a', tertiary: '#e57373' },
-            white: { primary: '#ffffff', secondary: '#e0e0e0', tertiary: '#bdbdbd' }
+            blue: { primary: '#ffffff', secondary: '#81d4fa', tertiary: '#4fc3f7', particle: '#e1f5fe' },
+            purple: { primary: '#ffffff', secondary: '#ce93d8', tertiary: '#ba68c8', particle: '#f3e5f5' },
+            green: { primary: '#ffffff', secondary: '#a5d6a7', tertiary: '#81c784', particle: '#e8f5e9' },
+            orange: { primary: '#ffffff', secondary: '#ffcc80', tertiary: '#ffb74d', particle: '#fff3e0' },
+            red: { primary: '#ffffff', secondary: '#ef9a9a', tertiary: '#e57373', particle: '#ffebee' },
+            white: { primary: '#ffffff', secondary: '#e0e0e0', tertiary: '#bdbdbd', particle: '#fafafa' },
+            gold: { primary: '#ffffff', secondary: '#fdd835', tertiary: '#fbc02d', particle: '#fffde7' },
+            pink: { primary: '#ffffff', secondary: '#f48fb1', tertiary: '#f06292', particle: '#fce4ec' }
         };
 
-        // 雪花生成算法
-        const snowflakeGenerators = {
-            classic: (ctx, params) => {
-                const { size, branches, complexity, thickness } = params;
-                const angleStep = (Math.PI * 2) / branches;
+        // 雪花绘制线段 - 用于生长动画
+        let snowflakeSegments = [];
+        let lastState = null;
 
-                for (let b = 0; b < branches; b++) {
-                    const baseAngle = b * angleStep;
-                    ctx.save();
-                    ctx.rotate(baseAngle);
+        function generateSnowflakeSegments() {
+            snowflakeSegments = [];
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
 
-                    // 主分支
-                    ctx.beginPath();
-                    ctx.moveTo(0, 0);
-                    ctx.lineTo(0, -size);
-                    ctx.strokeStyle = params.colors.primary;
-                    ctx.lineWidth = thickness;
-                    ctx.stroke();
+            const generators = {
+                classic: () => generateClassicSegments(),
+                dendritic: () => generateDendriticSegments(),
+                plate: () => generatePlateSegments(),
+                needle: () => generateNeedleSegments(),
+                stellar: () => generateStellarSegments(),
+                fern: () => generateFernSegments(),
+                crystal: () => generateCrystalSegments(),
+                complex: () => generateComplexSegments()
+            };
 
-                    // 侧分支
-                    for (let i = 1; i <= complexity; i++) {
-                        const dist = (size / complexity) * i;
-                        const branchSize = (size * 0.3) / (i * 0.5);
+            const segments = generators[state.type] ? generators[state.type]() : generateClassicSegments();
 
-                        // 两侧分支
-                        for (let side of [-1, 1]) {
-                            ctx.beginPath();
-                            ctx.moveTo(0, -dist);
-                            const sideX = Math.cos(side * Math.PI / 6) * branchSize;
-                            const sideY = -dist - Math.abs(Math.sin(side * Math.PI / 6)) * branchSize;
-                            ctx.lineTo(sideX, sideY);
-                            ctx.strokeStyle = params.colors.secondary;
-                            ctx.lineWidth = thickness * 0.7;
-                            ctx.stroke();
+            // 应用旋转变换
+            segments.forEach(seg => {
+                seg.x1 = centerX + seg.x1;
+                seg.y1 = centerY + seg.y1;
+                seg.x2 = centerX + seg.x2;
+                seg.y2 = centerY + seg.y2;
+            });
 
-                            // 更小的分支
-                            if (complexity > 3) {
-                                ctx.beginPath();
-                                ctx.moveTo(0, -dist);
-                                const miniX = Math.cos(side * Math.PI / 12) * branchSize * 0.6;
-                                const miniY = -dist - Math.abs(Math.sin(side * Math.PI / 12)) * branchSize * 0.6;
-                                ctx.lineTo(miniX, miniY);
-                                ctx.strokeStyle = params.colors.tertiary;
-                                ctx.lineWidth = thickness * 0.5;
-                                ctx.stroke();
+            snowflakeSegments = segments;
+            lastState = JSON.stringify({
+                type: state.type,
+                size: state.size,
+                branches: state.branches,
+                complexity: state.complexity,
+                thickness: state.thickness
+            });
+        }
+
+        function generateClassicSegments() {
+            const segments = [];
+            const { size, branches, complexity } = state;
+            const angleStep = (Math.PI * 2) / branches;
+
+            for (let b = 0; b < branches; b++) {
+                const baseAngle = b * angleStep;
+
+                // 主分支
+                segments.push({
+                    x1: 0, y1: 0,
+                    x2: Math.cos(baseAngle - Math.PI/2) * size,
+                    y2: Math.sin(baseAngle - Math.PI/2) * size,
+                    layer: 0,
+                    color: 'primary',
+                    width: state.thickness
+                });
+
+                // 侧分支
+                for (let i = 1; i <= complexity; i++) {
+                    const dist = (size / complexity) * i;
+                    const branchSize = (size * 0.3) / (i * 0.5);
+                    const baseX = Math.cos(baseAngle - Math.PI/2) * dist;
+                    const baseY = Math.sin(baseAngle - Math.PI/2) * dist;
+
+                    for (let side of [-1, 1]) {
+                        const sideAngle = baseAngle + side * Math.PI / 6 - Math.PI/2;
+                        const sideX = baseX + Math.cos(sideAngle) * branchSize;
+                        const sideY = baseY + Math.sin(sideAngle) * branchSize;
+
+                        segments.push({
+                            x1: baseX, y1: baseY,
+                            x2: sideX, y2: sideY,
+                            layer: i * 0.3,
+                            color: 'secondary',
+                            width: state.thickness * 0.7
+                        });
+
+                        // 小分支
+                        if (complexity > 3) {
+                            const miniAngle = baseAngle + side * Math.PI / 12 - Math.PI/2;
+                            const miniX = baseX + Math.cos(miniAngle) * branchSize * 0.6;
+                            const miniY = baseY + Math.sin(miniAngle) * branchSize * 0.6;
+
+                            segments.push({
+                                x1: baseX, y1: baseY,
+                                x2: miniX, y2: miniY,
+                                layer: i * 0.3 + 0.15,
+                                color: 'tertiary',
+                                width: state.thickness * 0.5
+                            });
+                        }
+                    }
+                }
+            }
+
+            return segments;
+        }
+
+        function generateDendriticSegments() {
+            const segments = [];
+            const { size, branches, complexity } = state;
+
+            function addBranch(x, y, angle, length, depth, layer) {
+                if (depth <= 0 || length < 5) return;
+
+                const endX = x + Math.cos(angle) * length;
+                const endY = y + Math.sin(angle) * length;
+
+                segments.push({
+                    x1: x, y1: y,
+                    x2: endX, y2: endY,
+                    layer: layer,
+                    color: depth === complexity ? 'primary' : (depth % 2 === 0 ? 'secondary' : 'tertiary'),
+                    width: state.thickness * (depth / complexity)
+                });
+
+                const newLength = length * 0.7;
+                addBranch(endX, endY, angle - Math.PI/7, newLength, depth - 1, layer + 0.2);
+                addBranch(endX, endY, angle + Math.PI/7, newLength, depth - 1, layer + 0.2);
+
+                if (depth > 2) {
+                    addBranch(endX, endY, angle - Math.PI/14, newLength * 0.5, depth - 2, layer + 0.3);
+                    addBranch(endX, endY, angle + Math.PI/14, newLength * 0.5, depth - 2, layer + 0.3);
+                }
+            }
+
+            const angleStep = (Math.PI * 2) / branches;
+            for (let b = 0; b < branches; b++) {
+                addBranch(0, 0, b * angleStep - Math.PI/2, size, complexity, 0);
+            }
+
+            return segments;
+        }
+
+        function generatePlateSegments() {
+            const segments = [];
+            const { size, branches, complexity } = state;
+            const angleStep = (Math.PI * 2) / branches;
+
+            for (let b = 0; b < branches; b++) {
+                const baseAngle = b * angleStep;
+
+                // 六边形板
+                for (let i = 0; i < 6; i++) {
+                    const angle1 = baseAngle + i * Math.PI / 3 - Math.PI/2;
+                    const angle2 = baseAngle + (i + 1) * Math.PI / 3 - Math.PI/2;
+                    const r = size * 0.8;
+
+                    segments.push({
+                        x1: Math.cos(angle1) * r,
+                        y1: Math.sin(angle1) * r,
+                        x2: Math.cos(angle2) * r,
+                        y2: Math.sin(angle2) * r,
+                        layer: 0.1,
+                        color: 'primary',
+                        width: state.thickness
+                    });
+                }
+
+                // 内层
+                const layers = Math.min(complexity, 4);
+                for (let l = 1; l <= layers; l++) {
+                    const layerSize = size * 0.8 * (1 - l * 0.2);
+                    for (let i = 0; i < 6; i++) {
+                        const angle1 = baseAngle + i * Math.PI / 3 + Math.PI / 6 - Math.PI/2;
+                        const angle2 = baseAngle + (i + 1) * Math.PI / 3 + Math.PI / 6 - Math.PI/2;
+
+                        segments.push({
+                            x1: Math.cos(angle1) * layerSize,
+                            y1: Math.sin(angle1) * layerSize,
+                            x2: Math.cos(angle2) * layerSize,
+                            y2: Math.sin(angle2) * layerSize,
+                            layer: l * 0.2,
+                            color: l % 2 === 1 ? 'secondary' : 'tertiary',
+                            width: state.thickness * 0.6
+                        });
+                    }
+                }
+            }
+
+            return segments;
+        }
+
+        function generateNeedleSegments() {
+            const segments = [];
+            const { size, branches, complexity } = state;
+            const angleStep = (Math.PI * 2) / branches;
+
+            for (let b = 0; b < branches; b++) {
+                const baseAngle = b * angleStep - Math.PI/2;
+
+                // 主针
+                segments.push({
+                    x1: 0, y1: 0,
+                    x2: Math.cos(baseAngle) * size,
+                    y2: Math.sin(baseAngle) * size,
+                    layer: 0,
+                    color: 'primary',
+                    width: state.thickness * 1.5
+                });
+
+                // 细侧针
+                for (let i = 1; i <= complexity; i++) {
+                    const dist = (size / complexity) * i;
+                    const baseX = Math.cos(baseAngle) * dist;
+                    const baseY = Math.sin(baseAngle) * dist;
+
+                    for (let side of [-1, 1]) {
+                        const sideAngle = baseAngle + side * Math.PI / 12;
+                        const tipX = Math.cos(sideAngle) * size * 0.15;
+                        const tipY = Math.sin(sideAngle) * size * 0.15;
+
+                        segments.push({
+                            x1: baseX, y1: baseY,
+                            x2: baseX + tipX,
+                            y2: baseY + tipY,
+                            layer: i * 0.15,
+                            color: 'secondary',
+                            width: state.thickness * 0.5
+                        });
+                    }
+                }
+            }
+
+            return segments;
+        }
+
+        function generateStellarSegments() {
+            const segments = [];
+            const { size, branches, complexity } = state;
+            const angleStep = (Math.PI * 2) / branches;
+
+            // 外星
+            for (let i = 0; i < branches * 2; i++) {
+                const angle1 = (i * Math.PI) / branches - Math.PI/2;
+                const angle2 = ((i + 1) * Math.PI) / branches - Math.PI/2;
+                const r1 = i % 2 === 0 ? size : size * 0.4;
+                const r2 = (i + 1) % 2 === 0 ? size : size * 0.4;
+
+                segments.push({
+                    x1: Math.cos(angle1) * r1,
+                    y1: Math.sin(angle1) * r1,
+                    x2: Math.cos(angle2) * r2,
+                    y2: Math.sin(angle2) * r2,
+                    layer: 0,
+                    color: 'primary',
+                    width: state.thickness
+                });
+            }
+
+            // 内星
+            for (let i = 0; i < branches * 2; i++) {
+                const angle1 = (i * Math.PI) / branches + Math.PI / branches - Math.PI/2;
+                const angle2 = ((i + 1) * Math.PI) / branches + Math.PI / branches - Math.PI/2;
+                const r1 = i % 2 === 0 ? size * 0.5 : size * 0.25;
+                const r2 = (i + 1) % 2 === 0 ? size * 0.5 : size * 0.25;
+
+                segments.push({
+                    x1: Math.cos(angle1) * r1,
+                    y1: Math.sin(angle1) * r1,
+                    x2: Math.cos(angle2) * r2,
+                    y2: Math.sin(angle2) * r2,
+                    layer: 0.3,
+                    color: 'tertiary',
+                    width: state.thickness * 0.7
+                });
+            }
+
+            return segments;
+        }
+
+        function generateFernSegments() {
+            const segments = [];
+            const { size, branches, complexity } = state;
+            const angleStep = (Math.PI * 2) / branches;
+
+            for (let b = 0; b < branches; b++) {
+                const baseAngle = b * angleStep - Math.PI/2;
+
+                // 主轴
+                segments.push({
+                    x1: 0, y1: 0,
+                    x2: Math.cos(baseAngle) * size,
+                    y2: Math.sin(baseAngle) * size,
+                    layer: 0,
+                    color: 'primary',
+                    width: state.thickness
+                });
+
+                // 蕨叶
+                for (let i = 1; i <= complexity; i++) {
+                    const dist = (size / complexity) * i;
+                    const baseX = Math.cos(baseAngle) * dist;
+                    const baseY = Math.sin(baseAngle) * dist;
+
+                    for (let side of [-1, 1]) {
+                        const leafAngle = baseAngle + side * Math.PI / 4;
+                        const leafSize = (size * 0.3) / (i * 0.4);
+
+                        segments.push({
+                            x1: baseX, y1: baseY,
+                            x2: baseX + Math.sin(leafAngle - Math.PI/2) * leafSize,
+                            y2: baseY + Math.cos(leafAngle - Math.PI/2) * leafSize,
+                            layer: i * 0.2,
+                            color: i % 2 === 0 ? 'secondary' : 'tertiary',
+                            width: state.thickness * 0.6
+                        });
+                    }
+                }
+            }
+
+            return segments;
+        }
+
+        function generateCrystalSegments() {
+            const segments = [];
+
+            // 外层晶体
+            for (let i = 0; i < 12; i++) {
+                const angle1 = (i * Math.PI) / 6 - Math.PI/2;
+                const angle2 = ((i + 1) * Math.PI) / 6 - Math.PI/2;
+                const r1 = i % 2 === 0 ? state.size : state.size * 0.6;
+                const r2 = (i + 1) % 2 === 0 ? state.size : state.size * 0.6;
+
+                segments.push({
+                    x1: Math.cos(angle1) * r1,
+                    y1: Math.sin(angle1) * r1,
+                    x2: Math.cos(angle2) * r2,
+                    y2: Math.sin(angle2) * r2,
+                    layer: 0,
+                    color: 'primary',
+                    width: state.thickness
+                });
+            }
+
+            // 内层
+            const layers = Math.min(state.complexity, 3);
+            for (let l = 1; l <= layers; l++) {
+                const layerSize = state.size * (0.4 + l * 0.15);
+                for (let i = 0; i < 12; i++) {
+                    const angle1 = (i * Math.PI) / 6 + Math.PI / 12 - Math.PI/2;
+                    const angle2 = ((i + 1) * Math.PI) / 6 + Math.PI / 12 - Math.PI/2;
+                    const r1 = i % 2 === 0 ? layerSize : layerSize * 0.7;
+                    const r2 = (i + 1) % 2 === 0 ? layerSize : layerSize * 0.7;
+
+                    segments.push({
+                        x1: Math.cos(angle1) * r1,
+                        y1: Math.sin(angle1) * r1,
+                        x2: Math.cos(angle2) * r2,
+                        y2: Math.sin(angle2) * r2,
+                        layer: l * 0.2,
+                        color: l === 1 ? 'secondary' : 'tertiary',
+                        width: state.thickness * 0.6
+                    });
+                }
+            }
+
+            // 对角线
+            for (let i = 0; i < 6; i++) {
+                const angle = i * Math.PI / 3 - Math.PI/2;
+                segments.push({
+                    x1: Math.cos(angle) * state.size * 0.6,
+                    y1: Math.sin(angle) * state.size * 0.6,
+                    x2: Math.cos(angle + Math.PI) * state.size * 0.6,
+                    y2: Math.sin(angle + Math.PI) * state.size * 0.6,
+                    layer: 0.5,
+                    color: 'tertiary',
+                    width: state.thickness * 0.5
+                });
+            }
+
+            return segments;
+        }
+
+        function generateComplexSegments() {
+            const segments = [];
+            const { size, branches, complexity } = state;
+            const angleStep = (Math.PI * 2) / branches;
+
+            for (let b = 0; b < branches; b++) {
+                const baseAngle = b * angleStep - Math.PI/2;
+
+                // 主分支
+                segments.push({
+                    x1: 0, y1: 0,
+                    x2: Math.cos(baseAngle) * size,
+                    y2: Math.sin(baseAngle) * size,
+                    layer: 0,
+                    color: 'primary',
+                    width: state.thickness
+                });
+
+                // 复杂侧分支
+                for (let i = 1; i <= complexity; i++) {
+                    const dist = (size / complexity) * i;
+                    const baseX = Math.cos(baseAngle) * dist;
+                    const baseY = Math.sin(baseAngle) * dist;
+
+                    for (let side of [-1, 1]) {
+                        const branchAngle = baseAngle + side * Math.PI / 5;
+                        const branchLength = Math.abs(size) * 0.25;
+
+                        segments.push({
+                            x1: baseX, y1: baseY,
+                            x2: baseX + Math.cos(branchAngle) * branchLength,
+                            y2: baseY + Math.sin(branchAngle) * branchLength,
+                            layer: i * 0.15,
+                            color: 'secondary',
+                            width: state.thickness * 0.7
+                        });
+
+                        // 次级分支
+                        if (i > 1) {
+                            for (let subSide of [-1, 1]) {
+                                const subAngle = branchAngle + subSide * Math.PI / 6;
+                                const subLength = branchLength * 0.5;
+
+                                segments.push({
+                                    x1: baseX + Math.cos(branchAngle) * branchLength,
+                                    y1: baseY + Math.sin(branchAngle) * branchLength,
+                                    x2: baseX + Math.cos(branchAngle) * branchLength + Math.cos(subAngle) * subLength,
+                                    y2: baseY + Math.sin(branchAngle) * branchLength + Math.sin(subAngle) * subLength,
+                                    layer: i * 0.15 + 0.1,
+                                    color: 'tertiary',
+                                    width: state.thickness * 0.5
+                                });
                             }
                         }
                     }
-
-                    ctx.restore();
-                }
-            },
-
-            dendritic: (ctx, params) => {
-                const { size, branches, complexity, thickness } = params;
-                const angleStep = (Math.PI * 2) / branches;
-
-                for (let b = 0; b < branches; b++) {
-                    ctx.save();
-                    ctx.rotate(b * angleStep);
-                    drawDendriticBranch(ctx, 0, -size, complexity, thickness, params.colors);
-                    ctx.restore();
-                }
-            },
-
-            plate: (ctx, params) => {
-                const { size, branches, complexity, thickness } = params;
-                const angleStep = (Math.PI * 2) / branches;
-
-                for (let b = 0; b < branches; b++) {
-                    const baseAngle = b * angleStep;
-                    ctx.save();
-                    ctx.rotate(baseAngle);
-
-                    // 六边形板
-                    ctx.beginPath();
-                    for (let i = 0; i <= 6; i++) {
-                        const angle = (i * Math.PI) / 3;
-                        const x = Math.cos(angle) * size * 0.8;
-                        const y = Math.sin(angle) * size * 0.8;
-                        if (i === 0) ctx.moveTo(x, y);
-                        else ctx.lineTo(x, y);
-                    }
-                    ctx.closePath();
-                    ctx.strokeStyle = params.colors.primary;
-                    ctx.lineWidth = thickness;
-                    ctx.stroke();
-
-                    // 内部装饰
-                    const layers = Math.min(complexity, 4);
-                    for (let l = 1; l <= layers; l++) {
-                        const layerSize = size * 0.8 * (1 - l * 0.2);
-                        ctx.beginPath();
-                        for (let i = 0; i <= 6; i++) {
-                            const angle = (i * Math.PI) / 3 + Math.PI / 6;
-                            const x = Math.cos(angle) * layerSize;
-                            const y = Math.sin(angle) * layerSize;
-                            if (i === 0) ctx.moveTo(x, y);
-                            else ctx.lineTo(x, y);
-                        }
-                        ctx.closePath();
-                        ctx.strokeStyle = l % 2 === 1 ? params.colors.secondary : params.colors.tertiary;
-                        ctx.lineWidth = thickness * 0.6;
-                        ctx.stroke();
-                    }
-
-                    ctx.restore();
-                }
-            },
-
-            needle: (ctx, params) => {
-                const { size, branches, complexity, thickness } = params;
-                const angleStep = (Math.PI * 2) / branches;
-
-                for (let b = 0; b < branches; b++) {
-                    ctx.save();
-                    ctx.rotate(b * angleStep);
-
-                    // 主针
-                    ctx.beginPath();
-                    ctx.moveTo(0, 0);
-                    ctx.lineTo(0, -size);
-                    ctx.strokeStyle = params.colors.primary;
-                    ctx.lineWidth = thickness * 1.5;
-                    ctx.stroke();
-
-                    // 细侧针
-                    for (let i = 1; i <= complexity; i++) {
-                        const dist = (size / complexity) * i;
-                        for (let side of [-1, 1]) {
-                            ctx.beginPath();
-                            ctx.moveTo(0, -dist);
-                            ctx.lineTo(side * size * 0.15, -dist - size * 0.1);
-                            ctx.strokeStyle = params.colors.secondary;
-                            ctx.lineWidth = thickness * 0.5;
-                            ctx.stroke();
-                        }
-                    }
-
-                    ctx.restore();
-                }
-            },
-
-            stellar: (ctx, params) => {
-                const { size, branches, complexity, thickness } = params;
-                const angleStep = (Math.PI * 2) / branches;
-
-                for (let b = 0; b < branches; b++) {
-                    ctx.save();
-                    ctx.rotate(b * angleStep);
-
-                    // 星形
-                    ctx.beginPath();
-                    for (let i = 0; i <= branches * 2; i++) {
-                        const angle = (i * Math.PI) / branches;
-                        const r = i % 2 === 0 ? size : size * 0.4;
-                        const x = Math.cos(angle) * r;
-                        const y = Math.sin(angle) * r;
-                        if (i === 0) ctx.moveTo(x, y);
-                        else ctx.lineTo(x, y);
-                    }
-                    ctx.closePath();
-                    ctx.strokeStyle = params.colors.primary;
-                    ctx.lineWidth = thickness;
-                    ctx.stroke();
-
-                    // 内层星
-                    ctx.beginPath();
-                    for (let i = 0; i <= branches * 2; i++) {
-                        const angle = (i * Math.PI) / branches + Math.PI / branches;
-                        const r = i % 2 === 0 ? size * 0.5 : size * 0.25;
-                        const x = Math.cos(angle) * r;
-                        const y = Math.sin(angle) * r;
-                        if (i === 0) ctx.moveTo(x, y);
-                        else ctx.lineTo(x, y);
-                    }
-                    ctx.closePath();
-                    ctx.strokeStyle = params.colors.tertiary;
-                    ctx.lineWidth = thickness * 0.7;
-                    ctx.stroke();
-
-                    ctx.restore();
-                }
-            },
-
-            fern: (ctx, params) => {
-                const { size, branches, complexity, thickness } = params;
-                const angleStep = (Math.PI * 2) / branches;
-
-                for (let b = 0; b < branches; b++) {
-                    ctx.save();
-                    ctx.rotate(b * angleStep);
-
-                    // 主轴
-                    ctx.beginPath();
-                    ctx.moveTo(0, 0);
-                    ctx.lineTo(0, -size);
-                    ctx.strokeStyle = params.colors.primary;
-                    ctx.lineWidth = thickness;
-                    ctx.stroke();
-
-                    // 蕨叶
-                    for (let i = 1; i <= complexity; i++) {
-                        const dist = (size / complexity) * i;
-                        for (let side of [-1, 1]) {
-                            ctx.beginPath();
-                            ctx.moveTo(0, -dist);
-                            const leafAngle = side * Math.PI / 4;
-                            const leafSize = (size * 0.3) / (i * 0.4);
-                            ctx.lineTo(Math.sin(leafAngle) * leafSize, -dist - Math.cos(leafAngle) * leafSize);
-                            ctx.strokeStyle = i % 2 === 0 ? params.colors.secondary : params.colors.tertiary;
-                            ctx.lineWidth = thickness * 0.6;
-                            ctx.stroke();
-                        }
-                    }
-
-                    ctx.restore();
-                }
-            },
-
-            crystal: (ctx, params) => {
-                const { size, branches, complexity, thickness } = params;
-
-                // 外层晶体
-                ctx.beginPath();
-                for (let i = 0; i <= 12; i++) {
-                    const angle = (i * Math.PI) / 6;
-                    const r = i % 2 === 0 ? size : size * 0.6;
-                    const x = Math.cos(angle) * r;
-                    const y = Math.sin(angle) * r;
-                    if (i === 0) ctx.moveTo(x, y);
-                    else ctx.lineTo(x, y);
-                }
-                ctx.closePath();
-                ctx.strokeStyle = params.colors.primary;
-                ctx.lineWidth = thickness;
-                ctx.stroke();
-
-                // 内层结构
-                const layers = Math.min(complexity, 3);
-                for (let l = 1; l <= layers; l++) {
-                    const layerSize = size * (0.4 + l * 0.15);
-                    ctx.beginPath();
-                    for (let i = 0; i <= 12; i++) {
-                        const angle = (i * Math.PI) / 6 + Math.PI / 12;
-                        const r = i % 2 === 0 ? layerSize : layerSize * 0.7;
-                        const x = Math.cos(angle) * r;
-                        const y = Math.sin(angle) * r;
-                        if (i === 0) ctx.moveTo(x, y);
-                        else ctx.lineTo(x, y);
-                    }
-                    ctx.closePath();
-                    ctx.strokeStyle = l === 1 ? params.colors.secondary : params.colors.tertiary;
-                    ctx.lineWidth = thickness * 0.6;
-                    ctx.stroke();
-                }
-
-                // 对角线
-                for (let i = 0; i < 6; i++) {
-                    const angle = i * Math.PI / 3;
-                    ctx.beginPath();
-                    ctx.moveTo(Math.cos(angle) * size * 0.6, Math.sin(angle) * size * 0.6);
-                    ctx.lineTo(Math.cos(angle + Math.PI) * size * 0.6, Math.sin(angle + Math.PI) * size * 0.6);
-                    ctx.strokeStyle = params.colors.tertiary;
-                    ctx.lineWidth = thickness * 0.5;
-                    ctx.stroke();
-                }
-            },
-
-            complex: (ctx, params) => {
-                const { size, branches, complexity, thickness } = params;
-                const angleStep = (Math.PI * 2) / branches;
-
-                for (let b = 0; b < branches; b++) {
-                    const baseAngle = b * angleStep;
-                    ctx.save();
-                    ctx.rotate(baseAngle);
-
-                    // 复杂的主分支
-                    drawComplexBranch(ctx, 0, -size, complexity, thickness, params.colors);
-
-                    ctx.restore();
-                }
-
-                // 中心装饰
-                for (let ring = 1; ring <= 3; ring++) {
-                    ctx.beginPath();
-                    ctx.arc(0, 0, size * 0.15 * ring, 0, Math.PI * 2);
-                    ctx.strokeStyle = ring === 2 ? params.colors.secondary : params.colors.tertiary;
-                    ctx.lineWidth = thickness * 0.5;
-                    ctx.stroke();
                 }
             }
-        };
 
-        function drawDendriticBranch(ctx, x, y, depth, thickness, colors, length = null) {
-            if (depth <= 0) return;
-
-            if (length === null) {
-                length = -y;
+            // 中心装饰环
+            for (let ring = 1; ring <= 3; ring++) {
+                const radius = size * 0.15 * ring;
+                segments.push({
+                    x1: Math.cos(0) * radius, y1: Math.sin(0) * radius,
+                    x2: Math.cos(Math.PI * 2) * radius, y2: Math.sin(Math.PI * 2) * radius,
+                    layer: ring * 0.1,
+                    color: ring === 2 ? 'secondary' : 'tertiary',
+                    width: state.thickness * 0.5,
+                    isArc: true,
+                    radius: radius
+                });
             }
 
-            ctx.beginPath();
-            ctx.moveTo(0, 0);
-            ctx.lineTo(0, y);
-            ctx.strokeStyle = colors.primary;
-            ctx.lineWidth = thickness;
-            ctx.stroke();
-
-            const newLength = Math.abs(length) * 0.7;
-            const newThickness = thickness * 0.7;
-
-            if (depth > 1) {
-                // 左分支
-                ctx.save();
-                ctx.translate(0, y);
-                ctx.rotate(-Math.PI / 7);
-                drawDendriticBranch(ctx, 0, -newLength, depth - 1, newThickness, colors, newLength);
-                ctx.restore();
-
-                // 右分支
-                ctx.save();
-                ctx.translate(0, y);
-                ctx.rotate(Math.PI / 7);
-                drawDendriticBranch(ctx, 0, -newLength, depth - 1, newThickness, colors, newLength);
-                ctx.restore();
-
-                // 中间小分支
-                if (depth > 2) {
-                    ctx.save();
-                    ctx.translate(0, y * 0.5);
-                    ctx.rotate(-Math.PI / 14);
-                    drawDendriticBranch(ctx, 0, -newLength * 0.5, depth - 2, newThickness * 0.5, colors, newLength * 0.5);
-                    ctx.restore();
-
-                    ctx.save();
-                    ctx.translate(0, y * 0.5);
-                    ctx.rotate(Math.PI / 14);
-                    drawDendriticBranch(ctx, 0, -newLength * 0.5, depth - 2, newThickness * 0.5, colors, newLength * 0.5);
-                    ctx.restore();
-                }
-            }
-        }
-
-        function drawComplexBranch(ctx, x, y, complexity, thickness, colors) {
-            ctx.beginPath();
-            ctx.moveTo(0, 0);
-            ctx.lineTo(0, y);
-            ctx.strokeStyle = colors.primary;
-            ctx.lineWidth = thickness;
-            ctx.stroke();
-
-            const segments = complexity;
-            for (let i = 1; i <= segments; i++) {
-                const dist = (y / segments) * i;
-
-                // 主侧分支
-                for (let side of [-1, 1]) {
-                    ctx.save();
-                    ctx.translate(0, dist);
-                    ctx.rotate(side * Math.PI / 5);
-
-                    const branchLength = Math.abs(y) * 0.25;
-                    ctx.beginPath();
-                    ctx.moveTo(0, 0);
-                    ctx.lineTo(0, -branchLength);
-                    ctx.strokeStyle = colors.secondary;
-                    ctx.lineWidth = thickness * 0.7;
-                    ctx.stroke();
-
-                    // 次级分支
-                    if (i > 1) {
-                        for (let subSide of [-1, 1]) {
-                            ctx.save();
-                            ctx.rotate(subSide * Math.PI / 6);
-                            ctx.beginPath();
-                            ctx.moveTo(0, 0);
-                            ctx.lineTo(0, -branchLength * 0.5);
-                            ctx.strokeStyle = colors.tertiary;
-                            ctx.lineWidth = thickness * 0.5;
-                            ctx.stroke();
-                            ctx.restore();
-                        }
-                    }
-
-                    ctx.restore();
-                }
-            }
+            return segments;
         }
 
         function drawSnowflake() {
@@ -995,28 +1156,119 @@
             ctx.shadowColor = colorThemes[state.colorTheme].secondary;
             ctx.shadowBlur = state.glow;
 
-            // 生成雪花
-            const generator = snowflakeGenerators[state.type];
-            if (generator) {
-                generator(ctx, {
-                    size: state.size,
-                    branches: state.branches,
-                    complexity: state.complexity,
-                    thickness: state.thickness,
-                    colors: colorThemes[state.colorTheme]
-                });
-            }
+            // 按层绘制雪花线段
+            const maxLayer = Math.max(...snowflakeSegments.map(s => s.layer || 0), 1);
+            const currentThreshold = state.growthProgress * maxLayer;
 
+            snowflakeSegments.forEach(seg => {
+                if (seg.layer <= currentThreshold) {
+                    const progress = Math.min(1, (currentThreshold - seg.layer) * 5);
+                    if (progress > 0) {
+                        ctx.beginPath();
+
+                        const colors = colorThemes[state.colorTheme];
+                        const colorKey = seg.color || 'primary';
+
+                        if (seg.isArc) {
+                            // 绘制圆弧
+                            ctx.arc(0, 0, seg.radius, 0, Math.PI * 2 * progress);
+                        } else {
+                            // 计算线段终点（用于生长动画）
+                            const dx = seg.x2 - seg.x1;
+                            const dy = seg.y2 - seg.y1;
+                            const endX = seg.x1 + dx * progress;
+                            const endY = seg.y1 + dy * progress;
+
+                            ctx.moveTo(seg.x1 - centerX, seg.y1 - centerY);
+                            ctx.lineTo(endX - centerX, endY - centerY);
+                        }
+
+                        ctx.strokeStyle = colors[colorKey];
+                        ctx.lineWidth = seg.width || state.thickness;
+                        ctx.lineCap = 'round';
+                        ctx.stroke();
+
+                        // 生成粒子
+                        if (progress >= 1 && Math.random() < 0.01 * state.growSpeed) {
+                            const colors = colorThemes[state.colorTheme];
+                            state.particles.push(new Particle(
+                                (seg.x2 - centerX) * 0.01 + (Math.random() - 0.5) * 10,
+                                (seg.y2 - centerY) * 0.01 + (Math.random() - 0.5) * 10,
+                                colors.particle
+                            ));
+                        }
+                    }
+                }
+            });
+
+            ctx.restore();
+
+            // 绘制粒子
+            ctx.save();
+            state.particles.forEach(p => p.draw(ctx));
             ctx.restore();
 
             // 更新状态信息
             updateStatusInfo();
+            updateProgressBar();
+        }
+
+        function updateProgressBar() {
+            const progressBar = document.getElementById('growthProgressBar');
+            progressBar.style.width = `${state.growthProgress * 100}%`;
+        }
+
+        function startGrowthAnimation() {
+            state.growthProgress = 0;
+            state.particles = [];
+
+            const duration = 2000 / state.growSpeed;
+            const startTime = performance.now();
+
+            function animateGrowth(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(1, elapsed / duration);
+
+                // 使用缓动函数
+                state.growthProgress = progress < 0.5
+                    ? 2 * progress * progress
+                    : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateGrowth);
+                } else {
+                    state.growthProgress = 1;
+                }
+            }
+
+            requestAnimationFrame(animateGrowth);
         }
 
         function animate() {
             if (state.animationEnabled) {
-                state.currentRotation += 0.005 * state.rotationSpeed;
+                state.currentRotation += 0.003 * state.rotationSpeed;
             }
+
+            // 检查是否需要重新生成雪花
+            const currentState = JSON.stringify({
+                type: state.type,
+                size: state.size,
+                branches: state.branches,
+                complexity: state.complexity,
+                thickness: state.thickness
+            });
+
+            if (currentState !== lastState) {
+                generateSnowflakeSegments();
+                if (state.growthEnabled) {
+                    startGrowthAnimation();
+                }
+            }
+
+            // 更新粒子
+            state.particles = state.particles.filter(p => !p.isDead());
+            state.particles.forEach(p => p.update());
+
             drawSnowflake();
             requestAnimationFrame(animate);
         }
@@ -1034,7 +1286,8 @@
             };
             const colorNames = {
                 blue: '蓝色', purple: '紫色', green: '绿色',
-                orange: '橙色', red: '红色', white: '白色'
+                orange: '橙色', red: '红色', white: '白色',
+                gold: '金色', pink: '粉色'
             };
             document.getElementById('statusInfo').textContent =
                 `${typeNames[state.type]} | 分支: ${state.branches} | 复杂度: ${state.complexity} | ${colorNames[state.colorTheme]}`;
@@ -1058,7 +1311,7 @@
         });
 
         // 参数滑块
-        const params = ['size', 'branches', 'complexity', 'thickness', 'speed', 'glow'];
+        const params = ['size', 'branches', 'complexity', 'thickness', 'speed', 'glow', 'growSpeed'];
         params.forEach(param => {
             const slider = document.getElementById(param);
             const valueDisplay = document.getElementById(param + 'Value');
@@ -1066,12 +1319,14 @@
             if (slider && valueDisplay) {
                 slider.addEventListener('input', (e) => {
                     const value = parseFloat(e.target.value);
-                    valueDisplay.textContent = value;
+                    valueDisplay.textContent = param === 'growSpeed' ? value.toFixed(1) : (param === 'speed' ? value.toFixed(1) : value);
 
                     if (param === 'speed') {
                         state.rotationSpeed = value;
                     } else if (param === 'glow') {
                         state.glow = value;
+                    } else if (param === 'growSpeed') {
+                        state.growSpeed = value;
                     } else {
                         state[param] = value;
                     }
@@ -1080,16 +1335,26 @@
         });
 
         // 动画开关
-        const animToggle = document.getElementById('animToggle');
-        animToggle.addEventListener('click', () => {
-            animToggle.classList.toggle('active');
-            state.animationEnabled = animToggle.classList.contains('active');
+        document.getElementById('animToggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            state.animationEnabled = this.classList.contains('active');
+        });
+
+        document.getElementById('growToggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            state.growthEnabled = this.classList.contains('active');
+        });
+
+        // 重新生长按钮
+        document.getElementById('growBtn').addEventListener('click', () => {
+            generateSnowflakeSegments();
+            startGrowthAnimation();
         });
 
         // 随机生成
         document.getElementById('randomBtn').addEventListener('click', () => {
-            const types = Object.keys(snowflakeGenerators);
-            const colors = Object.keys(colorThemes);
+            const types = ['classic', 'dendritic', 'plate', 'needle', 'stellar', 'fern', 'crystal', 'complex'];
+            const colors = ['blue', 'purple', 'green', 'orange', 'red', 'white', 'gold', 'pink'];
 
             state.type = types[Math.floor(Math.random() * types.length)];
             state.size = 150 + Math.random() * 150;
@@ -1120,6 +1385,12 @@
             document.getElementById('speedValue').textContent = state.rotationSpeed.toFixed(1);
             document.getElementById('glow').value = state.glow;
             document.getElementById('glowValue').textContent = Math.round(state.glow);
+
+            // 触发生长动画
+            generateSnowflakeSegments();
+            if (state.growthEnabled) {
+                startGrowthAnimation();
+            }
         });
 
         // 重置
@@ -1132,6 +1403,7 @@
             state.colorTheme = 'blue';
             state.rotationSpeed = 1;
             state.glow = 15;
+            state.growSpeed = 1;
 
             document.querySelectorAll('.type-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.type === 'classic');
@@ -1152,6 +1424,13 @@
             document.getElementById('speedValue').textContent = '1.0';
             document.getElementById('glow').value = 15;
             document.getElementById('glowValue').textContent = '15';
+            document.getElementById('growSpeed').value = 1;
+            document.getElementById('growSpeedValue').textContent = '1.0';
+
+            generateSnowflakeSegments();
+            if (state.growthEnabled) {
+                startGrowthAnimation();
+            }
         });
 
         // 保存图片
@@ -1169,7 +1448,9 @@
         });
 
         // 初始化
+        generateSnowflakeSegments();
         animateBackground();
+        startGrowthAnimation();
         animate();
     </script>
 </body>
